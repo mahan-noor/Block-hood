@@ -14,6 +14,9 @@ def index(request):
     neighborhoods = Neighborhood.get_all_neighborhoods()
     return render(request, 'index.html',{"neighborhoods":neighborhoods})
 
+def profile(request, username):
+    return render(request, 'profile.html')
+
 
 
 def my_area(request, id):

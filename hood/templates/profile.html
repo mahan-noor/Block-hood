@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load static %}
-{% load staticfiles %}
+
 
 
 {% block content %}
@@ -18,7 +18,7 @@
                 <hr>
                 <p class="mt-2">Username: <strong>{{user.profile.user}}</strong></p>
                 <p class="card-text">Email: <strong>{{user.profile.email}}</strong></p>
-                <p class="card-text">Email: <strong>{{user.profile.neighborhood}}</strong></p>
+                <p class="card-text">hood: <strong>{{user.profile.neighborhood}}</strong></p>
                 <p class="card-text">Bio: {{user.profile.bio |safe}}</p>
 
 
