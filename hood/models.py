@@ -39,7 +39,24 @@ class Profile(models.Model):
     def get_all_bs(cls):
         businesses = cls.objects.all()
         return businesses
+class Business(models.Model):
+    bs_name = models.CharField(max_length=30)
+    about = HTMLField()
+    bs_user = models.OneToOneField(User,on_delete=models.CASCADE, primary_key=True)
+    bs_location = models.ForeignKey(Neighborhood, related_name="businesses", on_delete=models.CASCADE)
+    bs_email = models.EmailField()
+    bs_pic = CloudinaryField('1920x1080')
 
+    def save_bs(self):
+        self.save()
+
+    def delete_bs(self):
+        self.delete()
+
+    @classmethod
+    def get_all_bs(cls):
+        businesses = cls.objects.all()
+        return businesses
 
 class Post(models.Model):
     title = models.CharField(max_length=30)
