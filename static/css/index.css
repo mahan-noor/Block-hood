@@ -117,3 +117,24 @@
     transform: scale(1.01);
   
   }
+
+  @media screen and (min-width:768px) {
+  
+}
+
+@media only screen and (max-width: 766px) {
+  .c_items {
+    display: none;
+  }
+  #n_name {
+    font-size: 35px !important;
+    padding-top: 45%;
+  }
+  #hm_h {
+    font-size: 20px !important;
+    padding-top: 5%;
+  }
+  #homelogo {
+    padding-top: 45%;
+  }
+}
