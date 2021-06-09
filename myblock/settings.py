@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'hood',
     'bootstrap4',
     'tinymce',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
