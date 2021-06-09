@@ -9,6 +9,8 @@ urlpatterns=[
     re_path('neighborhood/(\d+)',views.my_area,name ='hood'),
     re_path('neighborhood/(\d+)',views.my_area,name ='hood'),
     re_path('neighborhood/(\d+)/join/',views.join,name ='join'),
+    re_path('user/(?P<username>\w+)', views.profile, name='profile'),
+    path('new/business', views.new_business, name='new-business')
  
 ]
 if settings.DEBUG:

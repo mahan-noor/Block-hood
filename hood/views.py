@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import ProfileForm, NewBusinessForm, NewPostForm
 
+
+
 # Create your views here.
 @login_required(login_url='/accounts/login/')
 def index(request):
