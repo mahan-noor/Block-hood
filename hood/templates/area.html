@@ -96,3 +96,46 @@
     {%endfor%}
 </div>
 </div>
+<div class="container-fluid" style="background-color: #f1f4f7;">
+    <div class="container">
+        <h1 style="font-family: 'Alegreya Sans SC', sans-serif; padding: 2%;" class="text-center">Posts</h1>
+        {%for post in neighborhood.posts.all%}
+        {% autoescape on %}
+        <div class="row" id="article-row" style="border-radius: 20px;">
+            <div class="col-md-7">
+                <p><strong>{{post.title}}</strong></p>
+                <p>{{post.description | safe}}</p>
+
+                <div class="animated fadeInUp details">
+                    <p class="font-weight-normal">by <em>{{post.post_user}} </em></p>
+
+
+                    <p>{{neighborhood.neighborhood_location}}</p>
+
+            
+
+
+
+                </div>
+
+            </div>
+            <div class="col-md-5">
+                    <img class="fadeInUp details img-fluid" src="{{user.profile.profile_pic.url}}" style="object-fit: cover; object-position: 100% 0; width: 180px; height: 180px; border-radius: 50%;">
+                </div>
+
+        </div>
+        {% endautoescape %}
+
+        {% empty %}
+
+        <div class="row">
+            <h2 class="text-center">No Posts To Show</h2>
+        </div>
+        {%endfor%}
+    </div>
+
+</div>
+
+
+
+{% endblock %}
