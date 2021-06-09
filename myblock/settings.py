@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import cloudinary
 from pathlib import Path
 import os
 
@@ -76,7 +76,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myblock.wsgi.application'
 
-
+cloudinary.config( 
+  cloud_name = "ismahan", 
+  api_key = "626165648298845", 
+  api_secret = "uf8XtnXkokMs2kjn7Xl-fD0JFTY" 
+)
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
