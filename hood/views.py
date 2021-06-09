@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http  import HttpResponse,Http404
 from django.shortcuts import redirect
-from .models import Neighborhood,Profile,Post
+from .models import Neighborhood,Profile,Post,Business
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
