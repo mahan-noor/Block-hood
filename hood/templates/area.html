@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{% load static%}
+
+{% block content %}
+{{block.super}}
+<div class="container-fluid">
+    <div class="container header text-center">
+        <div class="logo" style="padding-top: 10%;">
+            <h2 style="font-family: 'Cinzel Decorative', cursive; color: #fff; font-size: 75px;" class="img-fluid" id="n_name">
+                {{ neighborhood.neighborhood_name }}</h2>
+            <h2 style="font-family: 'Alatsi', sans-serif; color: #fff;"> <img
+                    src="{%static 'images/icons8-marker-25.png'%}" alt="" class="img-fluid"
+                    style="padding-bottom: 10px;"> {{neighborhood.neighborhood_location}}</h2>
+            <div class="text-white">
+                {% for member in neighborhood.occupants_count.all%}
+                <p>{{member.username}}</p>
+                {%endfor%}
+            </div>
+            <a href="{%url 'join' neighborhood.id%}"
+                class="btn btn-dark rounded rounded-pill rounded-pill"><strong>Join</strong></a>
+        </div>
+
+    </div>
