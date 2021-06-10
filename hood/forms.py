@@ -1,5 +1,5 @@
 from django import forms
-from .models import Profile, Business, Profile
+from .models import Profile, Business, Post
 
 class NewBusinessForm(forms.Form):
     class Meta:
@@ -8,7 +8,7 @@ class NewBusinessForm(forms.Form):
 
 class NewPostForm(forms.ModelForm):
     class Meta:
-        model = Business
+        model = Post
         exclude = ['post_user','post_location','post_pic']
 
 class ProfileForm(forms.ModelForm):
