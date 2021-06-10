@@ -8,7 +8,7 @@ class NewBusinessForm(forms.Form):
 
 class NewPostForm(forms.ModelForm):
     class Meta:
-        model = Post
+        model = Business
         exclude = ['post_user','post_location','post_pic']
 
 class ProfileForm(forms.ModelForm):
